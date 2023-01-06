@@ -207,7 +207,7 @@ public class Program {
 
 		System.out.println("Thông tin kiểu question 1:");
 		System.out.println("ID:" + tq1.id);
-		System.out.println("Name:" + tq1.name);
+		System.out.println("TypeName:" + tq1.name);
 		
 		Department tq2 = new TypeQuestion();
 		tq2.id = 1;
@@ -215,23 +215,74 @@ public class Program {
 
 		System.out.println("Thông tin kiểu question 2:");
 		System.out.println("ID:" + tq2.id);
-		System.out.println("Name:" + tq2.name);
+		System.out.println("TypeName:" + tq2.name);
 		
-		Department tq1 = new TypeQuestion();
-		tq1.id = 1;
-		tq1.name = "Essay";
+		Department tq3 = new TypeQuestion();
+		tq3.id = 1;
+		tq3.name = "Multiple_Choice";
 
-		System.out.println("Thông tin kiểu question 1:");
-		System.out.println("ID:" + tq1.id);
-		System.out.println("Name:" + tq1.name);
+		System.out.println("Thông tin kiểu question 3:");
+		System.out.println("ID:" + tq3.id);
+		System.out.println("TypeName:" + tq3.name);
 		
-		Department tq1 = new TypeQuestion();
-		tq1.id = 1;
-		tq1.name = "Essay";
+		Department tq4 = new TypeQuestion();
+		tq4.id = 1;
+		tq4.name = "Multiple_Choice";
 
-		System.out.println("Thông tin kiểu question 1:");
-		System.out.println("ID:" + tq1.id);
-		System.out.println("Name:" + tq1.name);
+		System.out.println("Thông tin kiểu question 4:");
+		System.out.println("ID:" + tq4.id);
+		System.out.println("TypeName:" + tq4.name);
+		
+		// tạo instance trong CategoryQuestion
+		CategoryQuestion cq1 = new CategoryQuestion();
+		cq1.id = 1;
+		cq1.name = "Java";
+
+		System.out.println("Thông tin chủ đề câu hỏi số 1:");
+		System.out.println("ID:" + cq1.id);
+		System.out.println("CategoryName:" + cq1.name);
+		
+		CategoryQuestion cq2 = new CategoryQuestion();
+		cq2.id = 1;
+		cq2.name = ".NET";
+
+		System.out.println("Thông tin chủ đề câu hỏi số 2:");
+		System.out.println("ID:" + cq2.id);
+		System.out.println("CategoryName:" + cq2.name);
+		
+		CategoryQuestion cq3 = new CategoryQuestion();
+		cq3.id = 1;
+		cq3.name = "SQL";
+
+		System.out.println("Thông tin chủ đề câu hỏi số 3:");
+		System.out.println("ID:" + cq3.id);
+		System.out.println("CategoryName:" + cq3.name);
+		
+		CategoryQuestion cq4 = new CategoryQuestion();
+		cq4.id = 1;
+		cq4.name = "Postman";
+
+		System.out.println("Thông tin chủ đề câu hỏi số 4:");
+		System.out.println("ID:" + cq4.id);
+		System.out.println("CategoryName:" + cq4.name);
+		
+		// tạo instance trong Question
+		Question qs1 = new Question();
+		qs1.id = 1;
+		qs1.Content = "this is content of qs1?";
+		qs1.categoryQS = cq3;
+		qs1.typeQS = tq4;
+		qs1.creator = ac1;
+		qs1.createDate = LocalDate.now();
+		
+
+		System.out.println("Thông tin Question 1:");
+		System.out.println("ID:" + qs1.id);
+		System.out.println("Content:" + qs1.Content);
+		System.out.println("Category:" + qs1.categoryQS.name);
+		System.out.println("Type:" + qs1.typeQS.name);
+		System.out.println("Creator:" + qs1.creator.name);
+		System.out.println("Date:" + qs1.createDate);
 		
 		
 	}
