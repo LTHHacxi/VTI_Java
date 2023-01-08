@@ -3,10 +3,14 @@ package com.VTI.frontend;
 import java.time.LocalDate;
 
 import com.VTI.entity.Account;
+import com.VTI.entity.CategoryQuestion;
 import com.VTI.entity.Department;
 import com.VTI.entity.Group;
 import com.VTI.entity.Position;
 import com.VTI.entity.Position.Pname;
+import com.VTI.entity.Question;
+import com.VTI.entity.TypeQuestion;
+import com.VTI.entity.TypeQuestion.TQname;
 
 public class Program {
 	public static void main(String[] args) {
@@ -87,7 +91,7 @@ public class Program {
 		System.out.println("DepartmentName:" + ac1.department.name);
 		System.out.println("PositionName:" + ac1.position.name);
 		System.out.println("Date:" + ac1.createDate);
-		System.out.println(" Group: "+ ac1.groups[0].name + ac1.groups[1].name);
+//		System.out.println(" Group: "+ ac1.groups[0].name + ac1.groups[1].name);
 
 		Account ac2 = new Account();
 		ac2.id = 2;
@@ -106,7 +110,7 @@ public class Program {
 		System.out.println("DepartmentName:" + ac2.department.name);
 		System.out.println("PositionName:" + ac2.position.name);
 		System.out.println("Date:" + ac2.createDate);
-		System.out.println(" Group: "+ ac2.groups[0].name + ac2.groups[1].name + ac2.groups[2].name);
+//		System.out.println(" Group: "+ ac2.groups[0].name + ac2.groups[1].name + ac2.groups[2].name);
 		
 		Account ac3 = new Account();
 		ac3.id = 3;
@@ -125,7 +129,7 @@ public class Program {
 		System.out.println("DepartmentName:" + ac3.department.name);
 		System.out.println("PositionName:" + ac3.position.name);
 		System.out.println("Date:" + ac3.createDate);
-		System.out.println(" Group: "+ ac3.groups[0].name + ac3.groups[1].name);
+//		System.out.println(" Group: "+ ac3.groups[0].name + ac3.groups[1].name);
 		
 		Account ac4 = new Account();
 		ac4.id = 4;
@@ -144,7 +148,7 @@ public class Program {
 		System.out.println("DepartmentName:" + ac4.department.name);
 		System.out.println("PositionName:" + ac4.position.name);
 		System.out.println("Date:" + ac4.createDate);
-		System.out.println(" Group: ");
+//		System.out.println(" Group: ");
 
 		// tạo instance trong group
 		Group gr1 = new Group();
@@ -203,31 +207,31 @@ public class Program {
 		
 		TypeQuestion tq1 = new TypeQuestion();
 		tq1.id = 1;
-		tq1.name = "Essay";
+		tq1.name = TQname.Essay;
 
 		System.out.println("Thông tin kiểu question 1:");
 		System.out.println("ID:" + tq1.id);
 		System.out.println("TypeName:" + tq1.name);
 		
-		Department tq2 = new TypeQuestion();
+		TypeQuestion tq2 = new TypeQuestion();
 		tq2.id = 1;
-		tq2.name = "Essay";
+		tq2.name = TQname.Essay;
 
 		System.out.println("Thông tin kiểu question 2:");
 		System.out.println("ID:" + tq2.id);
 		System.out.println("TypeName:" + tq2.name);
 		
-		Department tq3 = new TypeQuestion();
+		TypeQuestion tq3 = new TypeQuestion();
 		tq3.id = 1;
-		tq3.name = "Multiple_Choice";
+		tq3.name = TQname.Essay;
 
 		System.out.println("Thông tin kiểu question 3:");
 		System.out.println("ID:" + tq3.id);
 		System.out.println("TypeName:" + tq3.name);
 		
-		Department tq4 = new TypeQuestion();
+		TypeQuestion tq4 = new TypeQuestion();
 		tq4.id = 1;
-		tq4.name = "Multiple_Choice";
+		tq4.name = TQname.Essay;
 
 		System.out.println("Thông tin kiểu question 4:");
 		System.out.println("ID:" + tq4.id);
@@ -281,10 +285,42 @@ public class Program {
 		System.out.println("Content:" + qs1.Content);
 		System.out.println("Category:" + qs1.categoryQS.name);
 		System.out.println("Type:" + qs1.typeQS.name);
-		System.out.println("Creator:" + qs1.creator.name);
+		System.out.println("Creator:" + qs1.creator.fullName);
 		System.out.println("Date:" + qs1.createDate);
 		
-		
+// Exercise 1 - Question 1
+		System.out.println("--------------Exercise 1 - Question 1--------------");
+		if (ac2.department== null) {
+			System.out.println("Nhân viên này chưa có phòng ban");
+		} else {
+System.out.println( "Phòng ban của nhân viên này là "+ ac2.department.name);
+		}
+// Exercise 1 - Question 3
+		System.out.println("--------------Exercise 1 - Question 3--------------");
+		System.out.println(ac2.department== null ? "Nhân viên này chưa có phòng ban" : "Phòng ban của nhân viên này là "+ ac2.department.name);		
+// Exercise 1 - Question 5
+		System.out.println("--------------Exercise 1 - Question 5--------------");
+	if (gr1.accounts == null) {
+		System.out.println("Nhóm chưa có thành viên");
+	} else {
+
+	switch (gr1.accounts.length) {
+	case 1:
+		System.out.println("Nhóm có một thành viên");
+		break;
+	case 2:
+		System.out.println("Nhóm có hai thành viên");
+		break;
+	case 3:
+		System.out.println("Nhóm có ba thành viên");
+		break;
+	default:
+		System.out.println("Nhóm có nhiều thành viên");
+
+		break;
+	}
+	}	
+	
 	}
 
 }
