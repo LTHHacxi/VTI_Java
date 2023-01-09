@@ -3,8 +3,10 @@ package com.VTI.frontend;
 import java.time.LocalDate;
 
 import com.VTI.entity.Account;
+import com.VTI.entity.Answer;
 import com.VTI.entity.CategoryQuestion;
 import com.VTI.entity.Department;
+import com.VTI.entity.Exam;
 import com.VTI.entity.Group;
 import com.VTI.entity.Position;
 import com.VTI.entity.Position.Pname;
@@ -273,7 +275,7 @@ public class Program {
 		// tạo instance trong Question
 		Question qs1 = new Question();
 		qs1.id = 1;
-		qs1.Content = "this is content of qs1?";
+		qs1.content = "this is content of qs1?";
 		qs1.categoryQS = cq3;
 		qs1.typeQS = tq4;
 		qs1.creator = ac1;
@@ -282,11 +284,140 @@ public class Program {
 
 		System.out.println("Thông tin Question 1:");
 		System.out.println("ID:" + qs1.id);
-		System.out.println("Content:" + qs1.Content);
+		System.out.println("Content:" + qs1.content);
 		System.out.println("Category:" + qs1.categoryQS.name);
 		System.out.println("Type:" + qs1.typeQS.name);
 		System.out.println("Creator:" + qs1.creator.fullName);
 		System.out.println("Date:" + qs1.createDate);
+		
+		Question qs2 = new Question();
+		qs2.id = 2;
+		qs2.content = "this is content of qs2?";
+		qs2.categoryQS = cq1;
+		qs2.typeQS = tq2;
+		qs2.creator = ac2;
+		qs2.createDate = LocalDate.now();
+		
+
+		System.out.println("Thông tin Question 2:");
+		System.out.println("ID:" + qs2.id);
+		System.out.println("Content:" + qs2.content);
+		System.out.println("Category:" + qs2.categoryQS.name);
+		System.out.println("Type:" + qs2.typeQS.name);
+		System.out.println("Creator:" + qs2.creator.fullName);
+		System.out.println("Date:" + qs2.createDate);
+		
+		Question qs3 = new Question();
+		qs3.id = 3;
+		qs3.content = "this is content of qs3?";
+		qs3.categoryQS = cq3;
+		qs3.typeQS = tq4;
+		qs3.creator = ac1;
+		qs3.createDate = LocalDate.now();
+		
+
+		System.out.println("Thông tin Question 3:");
+		System.out.println("ID:" + qs3.id);
+		System.out.println("Content:" + qs3.content);
+		System.out.println("Category:" + qs3.categoryQS.name);
+		System.out.println("Type:" + qs3.typeQS.name);
+		System.out.println("Creator:" + qs3.creator.fullName);
+		System.out.println("Date:" + qs3.createDate);
+		
+		Question qs4 = new Question();
+		qs4.id = 1;
+		qs4.content = "this is content of qs4?";
+		qs4.categoryQS = cq2;
+		qs4.typeQS = tq1;
+		qs4.creator = ac1;
+		qs4.createDate = LocalDate.now();
+		
+
+		System.out.println("Thông tin Question 4:");
+		System.out.println("ID:" + qs4.id);
+		System.out.println("Content:" + qs4.content);
+		System.out.println("Category:" + qs4.categoryQS.name);
+		System.out.println("Type:" + qs4.typeQS.name);
+		System.out.println("Creator:" + qs4.creator.fullName);
+		System.out.println("Date:" + qs4.createDate);
+		
+		
+		// tạo instance trong Answer
+		Answer as1 = new Answer();
+		as1.id = 1;
+		as1.content = "this is content of answer for qs1?";
+		as1.question = qs1;
+		as1.isCorrect = false;
+		
+
+		System.out.println("Thông tin Answer 1:");
+		System.out.println("ID:" + as1.id);
+		System.out.println("Content:" + as1.content);
+		System.out.println("QuestionID:" + as1.question.id);
+		System.out.println("True Or False:" + as1.isCorrect);
+		
+		Answer as2 = new Answer();
+		as2.id = 1;
+		as2.content = "this is content of answer for qs2?";
+		as2.question = qs1;
+		as2.isCorrect = true;
+		
+
+		System.out.println("Thông tin Answer 2:");
+		System.out.println("ID:" + as2.id);
+		System.out.println("Content:" + as2.content);
+		System.out.println("QuestionID:" + as2.question.id);
+		System.out.println("True Or False:" + as2.isCorrect);
+		
+		Answer as3 = new Answer();
+		as3.id = 1;
+		as3.content = "this is content of answer for qs3?";
+		as3.question = qs1;
+		as3.isCorrect = false;
+		
+
+		System.out.println("Thông tin Answer 3:");
+		System.out.println("ID:" + as3.id);
+		System.out.println("Content:" + as3.content);
+		System.out.println("QuestionID:" + as3.question.id);
+		System.out.println("True Or False:" + as3.isCorrect);
+		
+		Answer as4 = new Answer();
+		as4.id = 1;
+		as4.content = "this is content of answer for qs4?";
+		as4.question = qs1;
+		as4.isCorrect = true;
+		
+
+		System.out.println("Thông tin Answer 4:");
+		System.out.println("ID:" + as4.id);
+		System.out.println("Content:" + as4.content);
+		System.out.println("QuestionID:" + as4.question.id);
+		System.out.println("True Or False:" + as4.isCorrect);
+		
+		// tạo instance trong Exam
+		Exam ex1 = new Exam();
+		ex1.id = 1;
+		ex1.code = 100;
+		ex1.title = "title1";
+		ex1.categoryExam = "CategoryExam1";
+		ex1.duration = 90;
+		ex1.creator = ac1;
+		ex1.createDate = LocalDate.now();
+		Question[]ex1questions = {qs1, qs2};
+		ex1.questions = ex1questions;
+
+		System.out.println("Thông tin Exam 1:");
+		System.out.println("ID:" + ex1.id);
+		System.out.println("Code:" + ex1.code);
+		System.out.println("Title:" + "title1");
+		System.out.println("CategoryExam:" + ex1.categoryExam);
+		System.out.println("Duration:" + ex1.duration);
+		System.out.println("Creator:" + ac1.username);
+		System.out.println("Date:" + ex1.createDate);
+//		System.out.println("QuestionID: "+ ex1.questions[0].id + ex1.questions[1].id);
+		
+		
 		
 // Exercise 1 - Question 1
 		System.out.println("--------------Exercise 1 - Question 1--------------");
