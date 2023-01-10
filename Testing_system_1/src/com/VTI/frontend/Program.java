@@ -517,6 +517,6 @@ public class Program {
 			System.out.println("Thông tin department thứ" + (i + 1) + "là: ");
 			System.out.println("Id: " + depArray2[i].id);
 			System.out.println("Name: " + depArray2[i].name);
-
+		}
 	}
 }
