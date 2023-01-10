@@ -83,7 +83,6 @@ public class Program {
 		ac1.department = dep1;
 		ac1.position = po1;
 		ac1.createDate = LocalDate.now();
-		
 
 		System.out.println("Thông tin Account 1:");
 		System.out.println("ID:" + ac1.id);
@@ -97,9 +96,9 @@ public class Program {
 
 		Account ac2 = new Account();
 		ac2.id = 2;
-		ac2.email = "user1@gmail.com";
-		ac2.username = "username1";
-		ac2.fullName = "i am user1";
+		ac2.email = "user1@gmai2.com";
+		ac2.username = "username2";
+		ac2.fullName = "i am user2";
 		ac2.department = dep2;
 		ac2.position = po2;
 		ac2.createDate = LocalDate.of(2021, 03, 15);
@@ -113,12 +112,12 @@ public class Program {
 		System.out.println("PositionName:" + ac2.position.name);
 		System.out.println("Date:" + ac2.createDate);
 //		System.out.println(" Group: "+ ac2.groups[0].name + ac2.groups[1].name + ac2.groups[2].name);
-		
+
 		Account ac3 = new Account();
 		ac3.id = 3;
-		ac3.email = "user1@gmail.com";
-		ac3.username = "username1";
-		ac3.fullName = "i am user1";
+		ac3.email = "user3@gmail.com";
+		ac3.username = "username3";
+		ac3.fullName = "i am user3";
 		ac3.department = dep3;
 		ac3.position = po3;
 		ac3.createDate = LocalDate.now();
@@ -132,12 +131,12 @@ public class Program {
 		System.out.println("PositionName:" + ac3.position.name);
 		System.out.println("Date:" + ac3.createDate);
 //		System.out.println(" Group: "+ ac3.groups[0].name + ac3.groups[1].name);
-		
+
 		Account ac4 = new Account();
 		ac4.id = 4;
-		ac4.email = "user1@gmail.com";
-		ac4.username = "username1";
-		ac4.fullName = "i am user1";
+		ac4.email = "user4@gmail.com";
+		ac4.username = "username4";
+		ac4.fullName = "i am user4";
 		ac4.department = dep2;
 		ac4.position = po4;
 		ac4.createDate = LocalDate.now();
@@ -158,7 +157,7 @@ public class Program {
 		gr1.name = "Grname 1";
 		gr1.creator = ac1;
 		gr1.createDate = LocalDate.now();
-		Account[]gr1accounts = {ac1, ac2};
+		Account[] gr1accounts = { ac1, ac2 };
 		gr1.accounts = gr1accounts;
 
 		System.out.println("Thông tin Group 1:");
@@ -172,7 +171,7 @@ public class Program {
 		gr2.name = "Grname 2";
 		gr2.creator = ac2;
 		gr2.createDate = LocalDate.now();
-		Account[]gr2accounts = {ac1, ac2, ac3};
+		Account[] gr2accounts = { ac1, ac2, ac3 };
 		gr2.accounts = gr2accounts;
 
 		System.out.println("Thông tin Group 2:");
@@ -186,7 +185,7 @@ public class Program {
 		gr3.name = "Grname 3";
 		gr3.creator = ac3;
 		gr3.createDate = LocalDate.now();
-		Account[]gr3accounts = {ac2, ac3};
+		Account[] gr3accounts = { ac2, ac3 };
 		gr3.accounts = gr3accounts;
 
 		System.out.println("Thông tin Group 3:");
@@ -206,7 +205,7 @@ public class Program {
 		// cách 3
 		ac3.groups = new Group[] { gr2, gr3 };
 		// tạo instance trong TypeQuestion
-		
+
 		TypeQuestion tq1 = new TypeQuestion();
 		tq1.id = 1;
 		tq1.name = TQname.Essay;
@@ -214,7 +213,7 @@ public class Program {
 		System.out.println("Thông tin kiểu question 1:");
 		System.out.println("ID:" + tq1.id);
 		System.out.println("TypeName:" + tq1.name);
-		
+
 		TypeQuestion tq2 = new TypeQuestion();
 		tq2.id = 1;
 		tq2.name = TQname.Essay;
@@ -222,7 +221,7 @@ public class Program {
 		System.out.println("Thông tin kiểu question 2:");
 		System.out.println("ID:" + tq2.id);
 		System.out.println("TypeName:" + tq2.name);
-		
+
 		TypeQuestion tq3 = new TypeQuestion();
 		tq3.id = 1;
 		tq3.name = TQname.Essay;
@@ -230,7 +229,7 @@ public class Program {
 		System.out.println("Thông tin kiểu question 3:");
 		System.out.println("ID:" + tq3.id);
 		System.out.println("TypeName:" + tq3.name);
-		
+
 		TypeQuestion tq4 = new TypeQuestion();
 		tq4.id = 1;
 		tq4.name = TQname.Essay;
@@ -238,7 +237,7 @@ public class Program {
 		System.out.println("Thông tin kiểu question 4:");
 		System.out.println("ID:" + tq4.id);
 		System.out.println("TypeName:" + tq4.name);
-		
+
 		// tạo instance trong CategoryQuestion
 		CategoryQuestion cq1 = new CategoryQuestion();
 		cq1.id = 1;
@@ -247,7 +246,7 @@ public class Program {
 		System.out.println("Thông tin chủ đề câu hỏi số 1:");
 		System.out.println("ID:" + cq1.id);
 		System.out.println("CategoryName:" + cq1.name);
-		
+
 		CategoryQuestion cq2 = new CategoryQuestion();
 		cq2.id = 1;
 		cq2.name = ".NET";
@@ -255,7 +254,7 @@ public class Program {
 		System.out.println("Thông tin chủ đề câu hỏi số 2:");
 		System.out.println("ID:" + cq2.id);
 		System.out.println("CategoryName:" + cq2.name);
-		
+
 		CategoryQuestion cq3 = new CategoryQuestion();
 		cq3.id = 1;
 		cq3.name = "SQL";
@@ -263,7 +262,7 @@ public class Program {
 		System.out.println("Thông tin chủ đề câu hỏi số 3:");
 		System.out.println("ID:" + cq3.id);
 		System.out.println("CategoryName:" + cq3.name);
-		
+
 		CategoryQuestion cq4 = new CategoryQuestion();
 		cq4.id = 1;
 		cq4.name = "Postman";
@@ -271,7 +270,7 @@ public class Program {
 		System.out.println("Thông tin chủ đề câu hỏi số 4:");
 		System.out.println("ID:" + cq4.id);
 		System.out.println("CategoryName:" + cq4.name);
-		
+
 		// tạo instance trong Question
 		Question qs1 = new Question();
 		qs1.id = 1;
@@ -280,7 +279,6 @@ public class Program {
 		qs1.typeQS = tq4;
 		qs1.creator = ac1;
 		qs1.createDate = LocalDate.now();
-		
 
 		System.out.println("Thông tin Question 1:");
 		System.out.println("ID:" + qs1.id);
@@ -289,7 +287,7 @@ public class Program {
 		System.out.println("Type:" + qs1.typeQS.name);
 		System.out.println("Creator:" + qs1.creator.fullName);
 		System.out.println("Date:" + qs1.createDate);
-		
+
 		Question qs2 = new Question();
 		qs2.id = 2;
 		qs2.content = "this is content of qs2?";
@@ -297,7 +295,6 @@ public class Program {
 		qs2.typeQS = tq2;
 		qs2.creator = ac2;
 		qs2.createDate = LocalDate.now();
-		
 
 		System.out.println("Thông tin Question 2:");
 		System.out.println("ID:" + qs2.id);
@@ -306,7 +303,7 @@ public class Program {
 		System.out.println("Type:" + qs2.typeQS.name);
 		System.out.println("Creator:" + qs2.creator.fullName);
 		System.out.println("Date:" + qs2.createDate);
-		
+
 		Question qs3 = new Question();
 		qs3.id = 3;
 		qs3.content = "this is content of qs3?";
@@ -314,7 +311,6 @@ public class Program {
 		qs3.typeQS = tq4;
 		qs3.creator = ac1;
 		qs3.createDate = LocalDate.now();
-		
 
 		System.out.println("Thông tin Question 3:");
 		System.out.println("ID:" + qs3.id);
@@ -323,7 +319,7 @@ public class Program {
 		System.out.println("Type:" + qs3.typeQS.name);
 		System.out.println("Creator:" + qs3.creator.fullName);
 		System.out.println("Date:" + qs3.createDate);
-		
+
 		Question qs4 = new Question();
 		qs4.id = 1;
 		qs4.content = "this is content of qs4?";
@@ -331,7 +327,6 @@ public class Program {
 		qs4.typeQS = tq1;
 		qs4.creator = ac1;
 		qs4.createDate = LocalDate.now();
-		
 
 		System.out.println("Thông tin Question 4:");
 		System.out.println("ID:" + qs4.id);
@@ -340,61 +335,56 @@ public class Program {
 		System.out.println("Type:" + qs4.typeQS.name);
 		System.out.println("Creator:" + qs4.creator.fullName);
 		System.out.println("Date:" + qs4.createDate);
-		
-		
+
 		// tạo instance trong Answer
 		Answer as1 = new Answer();
 		as1.id = 1;
 		as1.content = "this is content of answer for qs1?";
 		as1.question = qs1;
 		as1.isCorrect = false;
-		
 
 		System.out.println("Thông tin Answer 1:");
 		System.out.println("ID:" + as1.id);
 		System.out.println("Content:" + as1.content);
 		System.out.println("QuestionID:" + as1.question.id);
 		System.out.println("True Or False:" + as1.isCorrect);
-		
+
 		Answer as2 = new Answer();
 		as2.id = 1;
 		as2.content = "this is content of answer for qs2?";
 		as2.question = qs1;
 		as2.isCorrect = true;
-		
 
 		System.out.println("Thông tin Answer 2:");
 		System.out.println("ID:" + as2.id);
 		System.out.println("Content:" + as2.content);
 		System.out.println("QuestionID:" + as2.question.id);
 		System.out.println("True Or False:" + as2.isCorrect);
-		
+
 		Answer as3 = new Answer();
 		as3.id = 1;
 		as3.content = "this is content of answer for qs3?";
 		as3.question = qs1;
 		as3.isCorrect = false;
-		
 
 		System.out.println("Thông tin Answer 3:");
 		System.out.println("ID:" + as3.id);
 		System.out.println("Content:" + as3.content);
 		System.out.println("QuestionID:" + as3.question.id);
 		System.out.println("True Or False:" + as3.isCorrect);
-		
+
 		Answer as4 = new Answer();
 		as4.id = 1;
 		as4.content = "this is content of answer for qs4?";
 		as4.question = qs1;
 		as4.isCorrect = true;
-		
 
 		System.out.println("Thông tin Answer 4:");
 		System.out.println("ID:" + as4.id);
 		System.out.println("Content:" + as4.content);
 		System.out.println("QuestionID:" + as4.question.id);
 		System.out.println("True Or False:" + as4.isCorrect);
-		
+
 		// tạo instance trong Exam
 		Exam ex1 = new Exam();
 		ex1.id = 1;
@@ -404,7 +394,7 @@ public class Program {
 		ex1.duration = 90;
 		ex1.creator = ac1;
 		ex1.createDate = LocalDate.now();
-		Question[]ex1questions = {qs1, qs2};
+		Question[] ex1questions = { qs1, qs2 };
 		ex1.questions = ex1questions;
 
 		System.out.println("Thông tin Exam 1:");
@@ -416,42 +406,117 @@ public class Program {
 		System.out.println("Creator:" + ac1.username);
 		System.out.println("Date:" + ex1.createDate);
 //		System.out.println("QuestionID: "+ ex1.questions[0].id + ex1.questions[1].id);
-		
-		
-		
+
+		// Testing system 2
 // Exercise 1 - Question 1
 		System.out.println("--------------Exercise 1 - Question 1--------------");
-		if (ac2.department== null) {
+		if (ac2.department == null) {
 			System.out.println("Nhân viên này chưa có phòng ban");
 		} else {
-System.out.println( "Phòng ban của nhân viên này là "+ ac2.department.name);
+			System.out.println("Phòng ban của nhân viên này là " + ac2.department.name);
 		}
+// Exercise 1 - Question 2
+		System.out.println("--------------Exercise 1 - Question 2--------------");
+		if (ac2.groups.length == 0) {
+			System.out.println("Nhân viên này chưa cố group");
+		} else if (ac2.groups.length == 1) {
+			System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+		} else if (ac2.groups.length == 2) {
+			System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+		} else if (ac2.groups.length == 3) {
+			System.out.println("Nhân viên này là người quan trọng, tham gia nhiều group");
+		} else {
+			System.out.println("Nhân viên này là người hóng chuyện, tham gia tất cả các group");
+		}
+
 // Exercise 1 - Question 3
 		System.out.println("--------------Exercise 1 - Question 3--------------");
-		System.out.println(ac2.department== null ? "Nhân viên này chưa có phòng ban" : "Phòng ban của nhân viên này là "+ ac2.department.name);		
+		System.out.println(ac2.department == null ? "Nhân viên này chưa có phòng ban"
+				: "Phòng ban của nhân viên này là " + ac2.department.name);
+
+// Exercise 1 - Question 4
+		System.out.println("--------------Exercise 1 - Question 4--------------");
+		System.out.println(ac1.position.name == Pname.Dev ? "Đây là Developer" : "Người này không phải là Developer");
+
 // Exercise 1 - Question 5
 		System.out.println("--------------Exercise 1 - Question 5--------------");
-	if (gr1.accounts == null) {
-		System.out.println("Nhóm chưa có thành viên");
-	} else {
+		if (gr1.accounts == null) {
+			System.out.println("Nhóm chưa có thành viên");
+		} else {
 
-	switch (gr1.accounts.length) {
-	case 1:
-		System.out.println("Nhóm có một thành viên");
-		break;
-	case 2:
-		System.out.println("Nhóm có hai thành viên");
-		break;
-	case 3:
-		System.out.println("Nhóm có ba thành viên");
-		break;
-	default:
-		System.out.println("Nhóm có nhiều thành viên");
+			switch (gr1.accounts.length) {
+			case 1:
+				System.out.println("Nhóm có một thành viên");
+				break;
+			case 2:
+				System.out.println("Nhóm có hai thành viên");
+				break;
+			case 3:
+				System.out.println("Nhóm có ba thành viên");
+				break;
+			default:
+				System.out.println("Nhóm có nhiều thành viên");
 
-		break;
+				break;
+			}
+		}
+// Exercise 1 - Question 6
+		System.out.println("--------------Exercise 1 - Question 6--------------");
+		switch (ac2.groups.length) {
+		case 0:
+			System.out.println("Nhân viên này chưa cố group");
+			break;
+		case 1:
+			System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+			break;
+		case 2:
+			System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+			break;
+		case 3:
+			System.out.println("Nhân viên này là người quan trọng, tham gia nhiều group");
+			break;
+		default:
+			System.out.println("Nhân viên này là người hóng chuyện, tham gia tất cả các group");
+			break;
+		}
+// Exercise 1 - Question 7
+		System.out.println("--------------Exercise 1 - Question 7--------------");
+		switch (ac1.position.name) {
+		case Dev:
+			System.out.println("Đây là Developer");
+			break;
+		default:
+			System.out.println("Người này không phải là Developer");
+			break;
+		}
+// Exercise 1 - Question 8
+		System.out.println("--------------Exercise 1 - Question 8--------------");
+		Account[] accArray = { ac1, ac2, ac3 };
+		for (Account account : accArray) {
+			System.out.println("AccountID: " + account.id + " Email: " + account.email + " Name: " + account.fullName);
+		}
+// Exercise 1 - Question 9
+		System.out.println("--------------Exercise 1 - Question 9--------------");
+		Department[] depArray = { dep1, dep2, dep3 };
+		for (Department department : depArray) {
+			System.out.println("AccountID: " + department.id + " Name: " + department.name);
+		}
+// Exercise 1 - Question 10
+		System.out.println("--------------Exercise 1 - Question 10--------------");
+		Account[] accArray2 = { ac1, ac2, ac3 };
+		for (int i = 0; i < accArray2.length; i = i + 1) {
+			System.out.println("Thông tin account thứ" + (i + 1) + "là: ");
+			System.out.println("Email: " + accArray2[i].email);
+			System.out.println("Full name: " + accArray2[i].fullName);
+			System.out.println("Phòng ban: " + accArray2[i].department.name);
+		}
+// Exercise 1 - Question 11
+		System.out.println("--------------Exercise 1 - Question 11--------------");
+		Department[] depArray2 = { dep1, dep2 };
+		for (int i = 0; i < depArray2.length; i = i + 1) {
+			System.out.println("Thông tin department thứ" + (i + 1) + "là: ");
+			System.out.println("Id: " + depArray2[i].id);
+			System.out.println("Name: " + depArray2[i].name);
+
 	}
-	}	
-	
-	}
-
 }
