@@ -467,10 +467,10 @@ public class Program {
 			System.out.println("Nhân viên này chưa cố group");
 			break;
 		case 1:
-			System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+			System.out.println("Group của nhân viên này là :" + ac2.groups[0].name);
 			break;
 		case 2:
-			System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+			System.out.println("Group của nhân viên này là  :" + ac2.groups[0].name + ac2.groups[1].name);
 			break;
 		case 3:
 			System.out.println("Nhân viên này là người quan trọng, tham gia nhiều group");
@@ -481,8 +481,8 @@ public class Program {
 		}
 // Exercise 1 - Question 7
 		System.out.println("--------------Exercise 1 - Question 7--------------");
-		switch (ac1.position.name) {
-		case Dev:
+		switch (ac1.position.name.toString()) {
+		case "Dev":
 			System.out.println("Đây là Developer");
 			break;
 		default:
@@ -503,6 +503,7 @@ public class Program {
 		}
 // Exercise 1 - Question 10
 		System.out.println("--------------Exercise 1 - Question 10--------------");
+		// for
 		Account[] accArray2 = { ac1, ac2, ac3 };
 		for (int i = 0; i < accArray2.length; i = i + 1) {
 			System.out.println("Thông tin account thứ" + (i + 1) + "là: ");
@@ -510,13 +511,124 @@ public class Program {
 			System.out.println("Full name: " + accArray2[i].fullName);
 			System.out.println("Phòng ban: " + accArray2[i].department.name);
 		}
+		// for each (lấy từ đầu đến cuối)
+		System.out.println("-------------------");
+		for (Account account : accArray2) {
+			System.out.println("Thông tin account là: ");
+			System.out.println("Email: " + account.email);
+			System.out.println("Full name: " + account.fullName);
+			System.out.println("Phòng ban: " + account.department.name);
+		}
 // Exercise 1 - Question 11
 		System.out.println("--------------Exercise 1 - Question 11--------------");
 		Department[] depArray2 = { dep1, dep2 };
 		for (int i = 0; i < depArray2.length; i = i + 1) {
-			System.out.println("Thông tin department thứ" + (i + 1) + "là: ");
+			System.out.println("Thông tin department thứ " + (i + 1) + " là: ");
 			System.out.println("Id: " + depArray2[i].id);
 			System.out.println("Name: " + depArray2[i].name);
 		}
+
+// Exercise 1 - Question 12
+		System.out.println("--------------Exercise 1 - Question 12--------------");
+		Department[] depArray3 = { dep1, dep2, dep3 };
+		for (int i = 0; i < 2; i = i + 1) {
+			System.out.println("Thông tin Department thứ " + (i + 1) + " là: ");
+			System.out.println("Email: " + depArray3[i].id);
+			System.out.println("Full name: " + depArray3[i].name);
+		}
+
+// Exercise 1 - Question 13
+		System.out.println("--------------Exercise 1 - Question 13--------------");
+		Account[] accArray4 = { ac1, ac2, ac3, ac4 };
+		for (int i = 0; i < accArray4.length; i = i + 1) {
+			if (i != 1) {
+				System.out.println("Thông tin account thứ" + (i + 1) + "là: ");
+				System.out.println("Email: " + accArray4[i].email);
+				System.out.println("Full name: " + accArray4[i].fullName);
+				System.out.println("Phòng ban: " + accArray4[i].department.name);
+			}
+		}
+// Exercise 1 - Question 14
+		System.out.println("--------------Exercise 1 - Question 14--------------");
+		for (int i1 = 0; i1 < accArray.length; i1++) {
+			if (accArray[i1].id < 4) {
+				System.out.println("Thông tin account: ");
+				System.out.println("Id: " + accArray[i1].id);
+				System.out.println("Name: " + accArray[i1].email);
+				System.out.println("Name: " + accArray[i1].fullName);
+				System.out.println("Name: " + accArray[i1].username);
+			}
+		}
+
+// Exercise 1 - Question 15
+		System.out.println("--------------Exercise 1 - Question 15--------------");
+		for (int j = 0; j <= 20; j++) {
+			System.out.println(j);
+		}
+
+// Exercise 1 - Question 16
+		System.out.println("--------------Exercise 1 - Question 16--------------");
+		Department[] depArray4 = { dep1, dep3 };
+		int i1 = 0;
+		while (i1 < depArray4.length) {
+			System.out.println("Thông tin department thứ" + (i1 + 1) + "là: ");
+			System.out.println("Id: " + depArray4[i1].id);
+			System.out.println("Name: " + depArray4[i1].name);
+			i1 = i1 + 1;
+		}
+// Exercise 1 - Question 17
+		System.out.println("--------------Exercise 1 - Question 17--------------");
+//		Question 10
+		System.out.println("--------------Exercise 1 - Question 17-10--------------");
+		Account[] accArray3 = { ac1, ac2, ac3, ac4 };
+		int i = 0;
+		do {
+			System.out.println("Thông tin account thứ" + (i + 1) + "là: ");
+			System.out.println("Email: " + accArray3[i].email);
+			System.out.println("Full name: " + accArray3[i].fullName);
+			System.out.println("Phòng ban: " + accArray3[i].department.name);
+			i++;
+		} while (i < accArray3.length);
+
+//		Question 11
+		System.out.println("--------------Exercise 1 - Question 17-11--------------");
+		Department[] depArray5 = { dep1, dep2 };
+		int i11 = 0;
+		do {
+			System.out.println("Thông tin department thứ " + (i11 + 1) + " là: ");
+			System.out.println("Id: " + depArray2[i11].id);
+			System.out.println("Name: " + depArray2[i11].name);
+			i11++;
+		} while (i11 < depArray5.length);
+
+//		Question 12
+		System.out.println("--------------Exercise 1 - Question 17-12--------------");
+		Department[] depArray6 = { dep1, dep2, dep3 };
+		int e = 0;
+		do {
+			System.out.println("Thông tin Department thứ " + (e + 1) + " là: ");
+			System.out.println("Email: " + depArray6[e].id);
+			System.out.println("Full name: " + depArray6[e].name);
+			e++;
+
+		} while (e < 2);
+
+//		Question 13
+		System.out.println("--------------Exercise 1 - Question 17-13--------------");
+		Account[] accArray1 = { ac1, ac2, ac3, ac4 };
+		int q = 0;
+
+		do {		
+
+			System.out.println("Thông tin account thứ " + (q + 1) + " là: ");
+			System.out.println("Email: " + accArray1[q].email);
+			System.out.println("Full name: " + accArray1[q].fullName);
+			System.out.println("Phòng ban: " + accArray1[q].department.name);
+			q++;
+		} while (q< accArray1.length);
+
+//		Question 14
+//		Question 15
+
 	}
 }
