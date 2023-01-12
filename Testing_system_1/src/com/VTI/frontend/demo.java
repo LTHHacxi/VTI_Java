@@ -89,9 +89,9 @@ public class demo {
 		}
 		//while true
 		System.out.println("-----------while true---------------");
-		while (true) {
-			System.out.println("DaoNQ");
-		}
+//		while (true) {
+//			System.out.println("DaoNQ");
+//		}
 		//do while
 		System.out.println("-----------do while ---------------");
 		int t =1;

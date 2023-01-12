@@ -1,6 +1,7 @@
 package com.VTI.frontend;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 import com.VTI.entity.Account;
 import com.VTI.entity.Answer;
@@ -562,8 +563,10 @@ public class Program {
 
 // Exercise 1 - Question 15
 		System.out.println("--------------Exercise 1 - Question 15--------------");
-		for (int j = 0; j <= 20; j++) {
-			System.out.println(j);
+		for (int i = 1; i <= 20; i++) {
+			if (i % 2 == 0) {
+				System.out.print(i);
+			}
 		}
 
 // Exercise 1 - Question 16
@@ -578,7 +581,7 @@ public class Program {
 		}
 // Exercise 1 - Question 17
 		System.out.println("--------------Exercise 1 - Question 17--------------");
-//		Question 10
+//		Question 17-10
 		System.out.println("--------------Exercise 1 - Question 17-10--------------");
 		Account[] accArray3 = { ac1, ac2, ac3, ac4 };
 		int i = 0;
@@ -590,7 +593,7 @@ public class Program {
 			i++;
 		} while (i < accArray3.length);
 
-//		Question 11
+//		Question 17-11
 		System.out.println("--------------Exercise 1 - Question 17-11--------------");
 		Department[] depArray5 = { dep1, dep2 };
 		int i11 = 0;
@@ -601,7 +604,7 @@ public class Program {
 			i11++;
 		} while (i11 < depArray5.length);
 
-//		Question 12
+//		Question 17-12
 		System.out.println("--------------Exercise 1 - Question 17-12--------------");
 		Department[] depArray6 = { dep1, dep2, dep3 };
 		int e = 0;
@@ -613,22 +616,53 @@ public class Program {
 
 		} while (e < 2);
 
-//		Question 13
+//		Question 17-13
 		System.out.println("--------------Exercise 1 - Question 17-13--------------");
 		Account[] accArray1 = { ac1, ac2, ac3, ac4 };
 		int q = 0;
 
-		do {		
+		do {
+			if (q != 1) {
 
-			System.out.println("Thông tin account thứ " + (q + 1) + " là: ");
-			System.out.println("Email: " + accArray1[q].email);
-			System.out.println("Full name: " + accArray1[q].fullName);
-			System.out.println("Phòng ban: " + accArray1[q].department.name);
+				System.out.println("Thông tin account thứ " + (q + 1) + " là: ");
+				System.out.println("Email: " + accArray1[q].email);
+				System.out.println("Full name: " + accArray1[q].fullName);
+				System.out.println("Phòng ban: " + accArray1[q].department.name);
+			}
 			q++;
-		} while (q< accArray1.length);
+		} while (q < accArray1.length);
 
-//		Question 14
-//		Question 15
+//		Question 17-14
+		System.out.println("--------------Exercise 1 - Question 17-14--------------");
+		int r = 0;
+		Account[] accArray5 = { ac1, ac2, ac3, ac4 };
+		do {
+			if (accArray5[r].id < 4) {
+				System.out.println("Thông tin account: ");
+				System.out.println("Id: " + accArray[r].id);
+				System.out.println("Name: " + accArray[r].email);
+				System.out.println("Name: " + accArray[r].fullName);
+				System.out.println("Name: " + accArray[r].username);
+			}
+			r++;
 
+		} while (r < accArray5.length);
+
+//		Question 17-15
+		System.out.println("--------------Exercise 1 - Question 17-15--------------");
+		int y = 0;
+
+		do {
+			if (y % 2 == 0) {
+				System.out.print(y);
+			}
+			y++;
+		} while (y <= 20);
+		
+		
+// Exercise 2 - Question 1	
+
+		
+		
 	}
 }
