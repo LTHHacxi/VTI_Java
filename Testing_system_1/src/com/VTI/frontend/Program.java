@@ -17,6 +17,7 @@ import com.VTI.entity.TypeQuestion.TQname;
 
 public class Program {
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 		// tạo instance trong Department
 		Department dep1 = new Department();
 		dep1.id = 1;
@@ -411,6 +412,7 @@ public class Program {
 		// Testing system 2
 // Exercise 1 - Question 1
 		System.out.println("--------------Exercise 1 - Question 1--------------");
+
 		if (ac2.department == null) {
 			System.out.println("Nhân viên này chưa có phòng ban");
 		} else {
@@ -658,11 +660,53 @@ public class Program {
 			}
 			y++;
 		} while (y <= 20);
-		
-		
+
 // Exercise 2 - Question 1	
 
-		
-		
+//		while (true) {
+//			System.out.println("+-----------------MENU---------------+");
+//						// dấu - để căng dòng
+//						// 36 là số kí tự tối thiểu trong cả dòng này
+//						// %n để xuống dòng
+//						System.out.printf("|%-36s|%n", "Mời bạn chọn Exercise cần xem: ");
+//						System.out.printf("|%-36s|%n", "1. Exercise 1");
+//						System.out.printf("|%-36s|%n", "2. Exercise 2");
+//						System.out.println("+------------------------------------+")
+//			            int exercise = scanner.nextInt();
+//			            if (exercise == 1) {
+//			                while (true) {
+//			                    System.out.println("Mời bạn chọn Question cần xem (gõ từ 1 đến 17) ");
+//			                    int questionex1 = scanner.nextInt();
+//			                    if (questionex1 == 1) {
+//			                		
+//			                		}else if (questionex1 == 2) {
+//										
+//									}
+//			                        if (question == 17) {
+//			                            while (true) {
+//			                                System.out.println("Mời bạn chọn câu hỏi con (gõ từ 17.10 đến 17.15) ");
+//			                                int subQuestion = sc.nextInt();
+//			                                if (subQuestion >= 17.10 && subQuestion <= 17.15) {
+//			                                    //show code tương ứng với từng subQuestion
+//			                                } else {
+//			                                    System.out.println("Mời bạn chọn lại");
+//			                                }
+//			                            }
+//			                        }
+//			                        break;
+//			                    } else {
+//			                        System.out.println("Mời bạn chọn lại");
+//			                    }
+//			                }
+//			                break;
+//			            } else if (exercise == 2) {
+//			                System.out.println("Vẫn chưa cập nhật câu trả lời.");
+//			                break;
+//			            } else {
+//			                System.out.println("Mời bạn chọn lại");
+//			         
+//			      
+//			            }		       
+//}
 	}
 }
