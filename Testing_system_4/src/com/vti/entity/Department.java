@@ -24,6 +24,12 @@ public class Department {
 		this.id = 0;
 	}
 
+	
+	
+	
+	
+	
+	
 	// hàm khởi tạo (có 2 tham số)
 	public Department(int idParam, String nameParam) {
 		this.id = idParam;
