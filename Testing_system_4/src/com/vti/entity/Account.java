@@ -6,14 +6,14 @@ import com.vti.entity.Position;
 import com.vti.entity.Group;
 
 public class Account {
-	public int id;
-	public String email;
-	public String username;
-	public String fullName;
-	public Position position;
-	public Department department;
-	public LocalDate createDate;
-	public Group[] groups;
+	private int id;
+	private String email;
+	private String username;
+	private String fullName;
+	private Position position;
+	private Department department;
+	private LocalDate createDate;
+	private Group[] groups;
 // Exercise 1 (Optional): Constructor
 	// Question 2:
 	// a)không có parameters
@@ -57,5 +57,73 @@ public class Account {
 	public String toString() {
 		return "Account [id=" + id + ", email=" + email + ", username=" + username + ", fullname=" + fullName + "]";
 	}
+// Exercise 3: Access Modifier
+	// Question 1:
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public Position getPosition() {
+		return position;
+	}
+
+	public void setPosition(Position position) {
+		this.position = position;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	public LocalDate getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(LocalDate createDate) {
+		this.createDate = createDate;
+	}
+
+	public Group[] getGroups() {
+		return groups;
+	}
+
+	public void setGroups(Group[] groups) {
+		this.groups = groups;
+	}
+	
+	
+	
 }

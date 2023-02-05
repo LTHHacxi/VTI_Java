@@ -1,8 +1,8 @@
 package com.vti.entity;
 
 public class Department {
-	public int id;
-	public String name;
+	private int id;
+	private String name;
 
 // Exercise 1 (Optional): Constructor
 	// Question 1:
@@ -23,8 +23,28 @@ public class Department {
 		this.name = name;
 		this.id = 0;
 	}
+// Exercise 3: Access Modifier
+	// Question 1:
+	public int getId() {
+		return id;
+	}
 
-	
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void abc() {
+	}	
+
+
 	
 	
 	
@@ -34,9 +54,6 @@ public class Department {
 	public Department(int idParam, String nameParam) {
 		this.id = idParam;
 		this.name = nameParam;
-	}
-
-	public void abc() {
 	}
 
 	// có thể làm hàm tạo tự động alt+shift+s chọn "generate contructors using

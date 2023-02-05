@@ -1,11 +1,26 @@
 package com.vti.entity;
 
-import com.VTI.entity.TypeQuestion.TQname;
+import com.vti.entity.TypeQuestion.TQname;
 
 public class TypeQuestion {
-	public int id;
+	private int id;
 	public enum TQname {
 		Essay, Multiple_Choice
 	}
-	public TQname name;
+	private TQname name;
+// Exercise 3: Access Modifier
+	// Question 1:	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public TQname getName() {
+		return name;
+	}
+	public void setName(TQname name) {
+		this.name = name;
+	}
+	
 }
