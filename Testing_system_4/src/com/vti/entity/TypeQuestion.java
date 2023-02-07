@@ -1,6 +1,6 @@
 package com.vti.entity;
 
-import com.vti.entity.TypeQuestion.TQname;
+
 
 public class TypeQuestion {
 	private int id;

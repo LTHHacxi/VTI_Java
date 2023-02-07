@@ -8,6 +8,7 @@ import com.vti.entity.CategoryQuestion;
 import com.vti.entity.Exam;
 import com.vti.entity.Group;
 import com.vti.entity.Question;
+import com.vti.entity.Student;
 import com.vti.entity.TypeQuestion;
 import com.vti.entity.Position.Pname;
 import com.vti.entity.TypeQuestion.TQname;
@@ -424,6 +425,14 @@ public class Program {
 		Position pos4 = new Position();
 		Account ac8 = new Account(4, "letuhao1@gmail.com", "letuhao1", "Hao1", "Le1", po1,
 				LocalDate.of(2020, 12, 30));
-
+//Exercise 4 (Optional): Constructor
+		// Question 1:
+		// b)
+		Student st1 = new Student(1, "Lê Hảo" , "Bình Định");
+		System.out.println(st1);
+		// c)
+		
+		
+		
 	}
 }
