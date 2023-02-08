@@ -2,18 +2,24 @@ package com.vti.frontend;
 
 import com.vti.entity.Account;
 
-public class demo1 {
+public class Demo1 {
 	public static void main(String[] args) {
-		Account ac1 = new Account();
-		ac1.setid(1);
-		ac1.setemail("email1@gmail.com");
-		ac1.setUsername("username1");
-		ac1.setFullname("fullname1");
+		Account account1 = new Account();
+//		account1.id = 1;
+//		account1.email = "DAONQ@gmail.com";
+//		account1.username = "DAONQ";
+//		account1.fullname = "Nguyễn Đạo";
 
-		System.out.println("Thông tin account");
-		System.out.println("ID: " + ac1.getId());
-		System.out.println("Email: " + ac1.getEmail());
-		System.out.println("Username: " + ac1.getUsername());
-		System.out.println("Fullname: " + ac1.getFullname());
+		account1.setId(1);
+		account1.setEmail("DAONQ@gmail.com");
+		account1.setUsername("DAONQ");
+		account1.setFullname("Nguyễn Đạo");
+
+		System.out.println("Thông tin Account 1:");
+		System.out.println("ID:" + account1.getId());
+		System.out.println("Email:" + account1.getEmail());
+		System.out.println("Username:" + account1.getUsername());
+		System.out.println("Fullname:" + account1.getFullname());
+
 	}
 }
