@@ -1,17 +1,25 @@
 package com.VTI.entity;
 
 public class Engineer extends Staff {
-private String specialize;
-//khai báo contructor không tham số
+	private String specialized;
 
-//khai báo contructor đủ tham số
-public Engineer(int age, String name, Gender gender, String address, String specialize) {
-	super(age, name, gender, address);
-	this.specialize = specialize;
-}
-//khai báo geter seter
+	public Engineer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
+	public Engineer(String name, int age, Gender gender, String address, String specialized) {
+		super(name, age, gender, address);
+		this.specialized = specialized;
 
+	}
 
+	public String getSpecialized() {
+		return specialized;
+	}
+
+	public void setSpecialized(String specialized) {
+		this.specialized = specialized;
+	}
 
 }

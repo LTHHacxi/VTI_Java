@@ -1,18 +1,32 @@
 package com.VTI.entity;
 
 public class Staff {
-	private int age;
 	private String name;
+	private int age;
 	private Gender gender;
 	private String address;
 
-	public Staff(int age, String name, Gender gender, String address) {
+//	Hàm contructor không có tham số
+	public Staff() {
 		super();
-		this.age = age;
+	}
+//	Hàm contructor có đủ tham số
+
+	public Staff(String name, int age, Gender gender, String address) {
+		super();
 		this.name = name;
+		this.age = age;
 		this.gender = gender;
 		this.address = address;
-		
+	}
+// Hàm Getter Setter
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getAge() {
@@ -21,14 +35,6 @@ public class Staff {
 
 	public void setAge(int age) {
 		this.age = age;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public Gender getGender() {
@@ -46,5 +52,4 @@ public class Staff {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
 }

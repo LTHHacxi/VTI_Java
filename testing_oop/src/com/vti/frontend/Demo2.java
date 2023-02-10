@@ -12,14 +12,23 @@ public class Demo2 {
 		mentor1.setName("Daonq1");
 		mentor1.setGender("Male");
 
+		System.out.println("-------------------");
 		System.out.println("Thông tin Mentor1:");
 		System.out.println(mentor1.printInfoCommon());
 		System.out.println(mentor1.printYearsOfExperience());
 
+		System.out.println("---------printInfoMentor----------");
+		mentor1.printInfoMentor();
 //		System.out.println("id:" + mentor1.getId());
 //		System.out.println("name:" + mentor1.getName());
 //		System.out.println("gender:" + mentor1.getGender());
 //		System.out.println("YearsOfExperience:" + mentor1.getYearsOfExperience());
+// Tạo thông tin mentor2
+		System.out.println("---------Thông tin mentor2----------");
+		Mentor mentor2 = new Mentor(2, "daonq2", "Male", 9);
+		mentor2.printInfoMentor();
+
+		System.out.println("-------------------");
 
 //		Tạo ra Student
 		Student student1 = new Student();
@@ -30,8 +39,6 @@ public class Demo2 {
 
 		System.out.println("Thông tin Student1:");
 		System.out.println(student1.printInfoCommon());
-// In thông tin mentor từ class mentor
-		System.out.println("--------------------------------");
-				
+
 	}
 }

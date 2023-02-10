@@ -1,25 +1,29 @@
 package com.VTI.entity;
 
-public class Worker extends Staff{
-private int rank;
-// khai báo contructor không tham số
+public class Worker extends Staff {
+	private int rank;
 
-//khai báo contructor đủ tham số
-public Worker(int age, String name, Gender gender, String address, int rank) {
-	super(age, name, gender, address);
-	this.rank = rank;
+//	Khai báo hàm contructor không có tham số
+	public Worker() {
+		super();
+		// TODO Auto-generated constructor stub
+	}	
+//	Khai báo hàm contructor có đủ tham số.
+	public Worker(String name, int age, Gender gender, String address, int rank) {
+		super(name, age, gender, address);
+		this.rank = rank;
+	}
+// khai báo getter setter
+
+	public int getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+
 }
 
 
-//khai báo geter seter
-public int getRank() {
-	return rank;
-}
 
-public void setRank(int rank) {
-	this.rank = rank;
-}
-
-
-
-}

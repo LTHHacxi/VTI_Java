@@ -2,43 +2,44 @@ package com.VTI.frontend;
 
 import java.util.Scanner;
 
+import com.VTI.backend.ExerciseBackend;
+
 public class Program {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		ExerciseBackend exBackend = new ExerciseBackend();
+
 		while (true) {
-			System.out.println("+-----------------MENU---------------+");
-			// dấu - để căng dòng
-			// 36 là số kí tự tối thiểu trong cả dòng này
-			// %n để xuống dòng
-			System.out.printf("|%-36s|%n", "Mời bạn chọn yêu cầu: ");
-			System.out.printf("|%-36s|%n", "1. Thêm mới cán bộ");
-			System.out.printf("|%-36s|%n", "2. Kiếm theo họ tên");
-			System.out.printf("|%-36s|%n", "3. Thông tin danh sách cán bộ");
-			System.out.printf("|%-36s|%n", "4. Nhập tên để xóa cán bộ");
-			System.out.printf("|%-36s|%n", "5. Thoát khỏi chương trình");
-			System.out.println("+------------------------------------+");
-			int choseMenu = scanner.nextInt();
-			switch (choseMenu) {
+			System.out.println("+------------------------ Menu -------------------+");
+			System.out.printf("|%-49s|%n", "1. Thêm mới cán bộ");
+			System.out.printf("|%-49s|%n", "2. Tìm kiếm theo họ tên");
+			System.out.printf("|%-49s|%n", "3. Hiện thị thông tin về danh sách các cán bộ");
+			System.out.printf("|%-49s|%n", "4. Nhập vào tên của cán bộ và delete cán bộ đó");
+			System.out.printf("|%-49s|%n", "5. Thoát khỏi chương trình");
+			System.out.println("+-------------------------------------------------+");
+
+			int chooseMenu = scanner.nextInt();
+
+			switch (chooseMenu) {
 			case 1:
-				;
+				exBackend.addStaff();
 				break;
 			case 2:
-				;
+				exBackend.findByName();
 				break;
 			case 3:
-				;
+				exBackend.printListStaff();
 				break;
 			case 4:
-				;
+				exBackend.deleteByName();
 				break;
 			case 5:
-				;
-				break;
+				return;
+
 			default:
-				System.out.println("Mời bạn chọn lại");
+				System.out.println("Bạn chọn chưa đúng!!!");
 				break;
 			}
-
 		}
 	}
 
