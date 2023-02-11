@@ -6,7 +6,7 @@ private String task;
 
 //khai báo contructor đủ tham số
 public Employee(int age, String name, Gender gender, String address, String task) {
-	super(age, name, gender, address);
+	super(name, age, gender, address);
 	this.task = task;
 }
 //khai báo geter seter
